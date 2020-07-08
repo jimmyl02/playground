@@ -8,7 +8,6 @@ logSocket.addEventListener('open', _event => {
 });
 
 function log(msg){
-    console.log('finished all gift requests');
     if(logSocket.readyState == WebSocket.OPEN){
         logSocket.send(JSON.stringify(msg));
     }

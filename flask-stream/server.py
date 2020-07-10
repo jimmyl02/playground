@@ -4,7 +4,7 @@ import time
 app = Flask(__name__)
 
 # The goal of this is to facilitate DNS rebinding attacks by delaying, then sending content
-# The keeping connection is also kept open on a timer so scripts will still run before browser closes.
+# The connection is also kept open on a timer so scripts will still run before browser closes.
 @app.route('/')
 def main():
     def generate():

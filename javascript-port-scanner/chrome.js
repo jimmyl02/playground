@@ -25,12 +25,6 @@ async function doExploit() {
     iframe.src = 'http://127.0.0.1:80';
     a.href = iframe.src + '#';
 
-    document.body.appendChild(iframe);
-
-    document.body.appendChild(a);
-
-    log("created iframe and anchor");
-
     iframe.onload = function() {
         calls++;
         if(calls > 1) {
@@ -44,5 +38,11 @@ async function doExploit() {
     timer = setTimeout(function(){
         log("port is OPEN");
     }, 5000);
+    
+
+    document.body.appendChild(iframe);
+    document.body.appendChild(a);
+
+    log("created iframe and anchor");
 
 }
